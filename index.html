@@ -209,6 +209,15 @@
         /* --- RESPONSIVE DESIGN (PARA EL MÓVIL) --- */
         /* ========================================= */
         @media (max-width: 768px) {
+            
+            /* --- AÑADE ESTO PARA ARREGLAR EL SCROLL --- */
+            .slide {
+                justify-content: flex-start; /* Hace que el contenido empiece desde arriba para que no se corte la cabeza de Hello Kitty */
+                overflow-y: auto; /* ¡Esta es la magia! Activa el scroll vertical solo si es necesario */
+                padding-top: 40px; /* Un poco de aire por arriba */
+                padding-bottom: 60px; /* Espacio extra abajo para que el botón no se pegue al borde */
+            }
+        
             /* Títulos y textos más pequeños para que quepan */
             h1 {
                 font-size: 2rem; 
