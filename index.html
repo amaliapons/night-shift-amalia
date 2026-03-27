@@ -204,6 +204,56 @@
             filter: grayscale(80%) contrast(150%); 
         }
 
+
+        /* ========================================= */
+        /* --- RESPONSIVE DESIGN (PARA EL MÓVIL) --- */
+        /* ========================================= */
+        @media (max-width: 768px) {
+            /* Títulos y textos más pequeños para que quepan */
+            h1 {
+                font-size: 2rem; 
+            }
+            p {
+                font-size: 1.1rem;
+                padding: 0 15px; /* Un poco de margen a los lados */
+            }
+
+            /* Imágenes principales un poco más pequeñas */
+            .hk-img, .reno-img {
+                max-height: 150px; 
+                max-width: 90%; /* Evita que se salgan de la pantalla */
+            }
+
+            /* Arreglar el collage desordenado para pantallas estrechas */
+            .photo-collage {
+                max-width: 320px; /* Contenedor más estrecho */
+                height: 250px;
+            }
+            .scattered-photo {
+                width: 110px; /* Fotos más pequeñas */
+            }
+            /* Juntamos las fotos para que no se salgan de la pantalla del móvil */
+            .photo1 { top: 0px; left: 2%; transform: rotate(-8deg); }
+            .photo2 { top: 30px; right: 2%; transform: rotate(10deg); }
+            .photo3 { top: 120px; left: 25%; transform: rotate(-5deg); }
+
+            /* Gatitas flotantes más pequeñas para que dejen leer el texto */
+            .kitty-float {
+                width: 70px;
+                opacity: 0.3; /* Más transparentes en móvil */
+            }
+
+            /* Botones un pelín más pequeños */
+            .btn-next, .btn-prev {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            .button-group {
+                flex-direction: column; /* Pone un botón encima del otro si no caben */
+                gap: 10px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -275,7 +325,7 @@
     <div class="slide" id="slide-5">
         <img src="rodolfo.jpeg" alt="Rodolfo the Hostage" class="reno-img">
         <h1 class="danger">The Hostage Situation</h1>
-        <p class="terror-text">Actually, I’ve kidnapped Rodolfo.</p>
+        <p class="terror-text">I’ve kidnapped Rodolfo.</p>
         <p>I snatched him at the ‘Night at the Museum’ party, and I won’t give him back unless you let me take part in the Night Shift.</p>
         <p class="terror-text">If you don’t let me in, I’ll carry on kidnapping reindeer until Christmas is over for everyone.</p>
         <div class="button-group">
@@ -290,7 +340,7 @@
         <p>I’m a good person and I don’t deserve to be rejected.</p>
         <p>I have nothing but love and kindness for everyone! 💕</p>
         <div class="button-group">
-            <button class="btn-prev" onclick="prevSlide()">Back to the dark side</button>
+            <button class="btn-prev" onclick="prevSlide()">Back</button>
             <button class="btn-next" onclick="nextSlide()">The Choice</button>
         </div>
     </div>
